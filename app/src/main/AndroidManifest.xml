@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.matisin.usbmouse">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application>
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/start_icon"
+            android:label="@string/title_activity_main"
+            android:supportsRtl="true"
+            android:taskAffinity="com.matisin.usbmouse.MainActivity"
+            android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".killService"
+            android:icon="@drawable/kill_icon"
+            android:label="@string/title_activity_kill_service"
+            android:supportsRtl="true"
+            android:taskAffinity="com.matisin.usbmouse.killService"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MouseActivity"
+            android:theme="@style/Theme.AppCompat"></activity>
+    </application>
+
+</manifest>

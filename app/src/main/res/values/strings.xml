@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">usb mouse</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_kill_service">killService</string>
+</resources>
